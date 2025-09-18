@@ -16,7 +16,7 @@ public class BreakpointDemo {
         System.out.println("安");
         System.out.println("你");
         System.out.println("好");
-        // resume 是直接跳到下一個中斷點
+        // resume 是直接跳到下一個中斷點，但重點在恢復執行，只是因為我有設定下一個中斷點，所以會跳到下一個
         // step into 一行一行執行，最單純
         // step over 跳過方法（但方法會執行，只是直接執行，不會進去方法內一步一步走）
     }
