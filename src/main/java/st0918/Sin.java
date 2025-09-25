@@ -9,9 +9,10 @@ public class Sin {
     }
 
     /*
-     * @param x: 徑度 這個程式透過泰勒展開世紀算 x 的 sin
-     * 值。由於泰勒展開式可以一直展到無窮值，我們在程式中必須設定停止的條件。一開始我們讓他跑 n 次，然後每次加 inc 個單位，當相鄰的兩次差距小於
-     * stop 時就停止，否則就繼續算下去。
+     * @param x: 徑度 這個程式透過泰勒展開世紀算 x 的 sin值。
+     * 由於泰勒展開式可以一直展到無窮值，我們在程式中必須設定停止的條件。
+     * 一開始我們讓他跑 n 次，然後每次加 inc 個單位，
+     * 當相鄰的兩次差距小於 stop 時就停止，否則就繼續算下去。
      */
     public double sin(double x) {
 
@@ -46,6 +47,8 @@ public class Sin {
             postive = postive * -1;
         }
 
+        // 可以加底線，斷言 assert
+        // assert (Math.abs(v-x) < 0.1);
         return v;
     }
 
@@ -58,6 +61,8 @@ public class Sin {
         for (int i = 1; i <= s; i++) {
             r = r * i;
         }
+        // 可以加底線，斷言 assert
+        // assert (r >= s)
         return r;
     }
 
