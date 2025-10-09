@@ -1,5 +1,5 @@
 1. pom 需添加
-~~~
+~~~xml
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -55,7 +55,7 @@
 ~~~
 
 2. 根據上述設定配置，需添加檔案 rule_set.xml
-~~~
+~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ruleset name="All Java Rules"
@@ -107,12 +107,12 @@
 ~~~
 
 3. maven 選單  
-    lifecycle:clean  
-    lifecycle:validate  
-    lifecycle:compile  
-    plugin:pmd:check  
+   lifecycle:clean  
+   lifecycle:validate  
+   lifecycle:compile  
+   plugin:pmd:check
 
-4. pmd 產生的報告，根據上面的配置設定會放在 
+4. pmd 產生的報告，根據上面的配置設定會放在
 ~~~
 target/reports/pmd.html
 ~~~

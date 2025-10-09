@@ -45,6 +45,10 @@ public class BMIutil {
         final String result;
         final double bmi = Math.round(weight / (height/100 * height/100) * 100.0) / 100.0;
         final Map<String, Double> map = new ConcurrentHashMap<>();
+        // ConcurrentHashMap 是執行緒安全的，適合多執行緒同時存取與修改資料，不會發生資料競爭問題。
+        // HashMap 則不是執行緒安全的，多執行緒同時操作時可能導致資料錯亂或例外。
+        // ConcurrentHashMap 內部採分段鎖（Segment Lock），效能比 Collections.synchronizedMap(new HashMap<>()) 好。
+        // 單執行緒環境下，HashMap 效能較佳；多執行緒則建議用 ConcurrentHashMap。
 
         final boolean isUnderWeight = bmi < 18.5;
         final boolean isNormalWeight = bmi >= 18.5 && bmi < 25;
